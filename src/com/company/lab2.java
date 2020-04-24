@@ -1,7 +1,5 @@
 package com.company;
 
-import java.awt.image.AreaAveragingScaleFilter;
-import java.beans.JavaBean;
 
 public class lab2 { public static void main(String[] args) {
 
@@ -14,9 +12,9 @@ public class lab2 { public static void main(String[] args) {
     multiplication3();
     division3();
 
-     System.out.println(" Rezultatul adunarii este :"+ adunare( 2,(short)3));
-     System.out.println("Rezultatul impartirii:" +impartire ());
-     System.out.println("Rezultatul scaderii este:"+scadere());
+     System.out.println(" Rezultatul adunarii este :"+ adunare(  2,(short)3));
+     System.out.println("Rezultatul impartirii:" +impartire (2,(short)3));
+     System.out.println("Rezultatul scaderii este:"+scadere(2,(short)3));
      JavaPointObject();
      System.out.println ("3");
      System.out.println(average(80,40,20));
@@ -68,17 +66,17 @@ public class lab2 { public static void main(String[] args) {
            System.out.println(multiplication4 );
 
        }
-      public static int adunare (int primulNumar,short alDoileaNumar){
+      public static int adunare (int primulNumarl,short alDoileaNumar) {
              int rezultat= 60+30;
              return rezultat;
       }
-      public static float impartire(){
+      public static float impartire (int primulNumarl,short alDoileaNumar) {
          int rezultat1 = 60/30;
          return rezultat1;
 
       }
 
-      public static int scadere(){
+      public static int scadere(int primulNumarl,short alDoileaNumar){
        int rezultat2 = 60- 30;
        return rezultat2;
       }
