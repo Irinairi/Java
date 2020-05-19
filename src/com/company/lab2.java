@@ -13,9 +13,25 @@ public class lab2 {
         division3();
         //tem if/else
         Calculator calcul = new Calculator();
-        System.out.println(" Rezultatul adunarii este :" + adunare(2, (short) 3));
-        System.out.println("Rezultatul impartirii:" + impartire(2, (short) 3));
-        System.out.println("Rezultatul scaderii este:" + scadere(2, (short) 3));
+        //System.out.println(" Rezultatul adunarii este :" + adunare(2, (short) 3));
+        calcul.adunare(2,3);
+        calcul.adunare(2,3,4);
+        calcul.adunare(2,3);
+        calcul.impartire(2,(short)3);
+        calcul.impartire(2,3);
+        calcul.impartire(2,1,3);
+        calcul.inmultirii(2,3);
+
+
+        //System.out.println("Rezultatul impartirii:" + impartire(2, (short) 3));
+        calcul.inmultirii(2,(short)3);
+        calcul.inmultirii(2,(short)3,(short)4);
+        calcul.scadere(2,(short)3);
+        calcul.scadere(2,3);
+        calcul.scadere(2,(short)2,(short)3);
+
+
+        //System.out.println("Rezultatul scaderii este:" + scadere(2, (short) 3));
 
         JavaPointObject();
         System.out.println("3");
@@ -63,6 +79,13 @@ public class lab2 {
         oper.printSumAverage( );
         //oper.printMediaDivi( );
         //oper.printAfisareNumere(  );
+        int []myArray =oper.getArrayHundred();
+        oper.printArray(myArray);
+        int []myArrayEven =oper.getArrayEven();
+       System.out.println(oper.getAverageFromArray(myArray));
+       System.out.print(oper.StrigArray(new String []{"lapte","carne","oua"},"lapte"));
+       System.out.println("number position is:"+oper.ReturnNumber(new int[]{1,2,3,4,5,6},4));
+
 
 
     }

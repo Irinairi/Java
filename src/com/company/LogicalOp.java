@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class LogicalOp {
 
 
@@ -262,26 +264,119 @@ public class LogicalOp {
 
     // Creati o metoda care sa primeasca doi parametrii de tip numar, si sa returneze media numerelor divizibile cu 7, din acel interval. //
     // Apelati metoda in clasa Main, metoda main() pentru a verifica daca functioneaza.
-   // public static void printMediaDivi() {
-      //  int i = 1, cout = 0, sum = 0;
+    // public static void printMediaDivi() {
+    //  int i = 1, cout = 0, sum = 0;
 
     // while ( i <= 100; i++)
-           // if (i % 7 == 0)
+    // if (i % 7 == 0)
 
     //}
-}
 
-        //Creati o metoda care sa afiseze primele 20 de numere din sirul lui Fibonacci.
-        //public static void printAfisareNumere ( int i){
-           // int i = 1, i1 = 1, i2;
-           // while (i < 18) i++;
-           // {
-              //  i2 = i1 + i;
-               // i = i1;
-               // i1 = i2;
 
-               // System.out.println(i + " " + i1 + " ");
-            //}
+    //Creati o metoda care sa afiseze primele 20 de numere din sirul lui Fibonacci.
+    //public static void printAfisareNumere ( int i){
+    // int i = 1, i1 = 1, i2;
+    // while (i < 18) i++;
+    // {
+    //  i2 = i1 + i;
+    // i = i1;
+    // i1 = i2;
+
+    // System.out.println(i + " " + i1 + " ");
+    //}
 
 
 //}
+//2.  In clasa LogicalOp, creati o metoda care sa scrie pe un array de 100 de pozitii,//
+// valorile de la 1 la 100. Sa se afiseze progresul in consola pe tot parcursul.//
+// Apelati metoda in main() pentru a verifica daca functioneaza.
+
+
+    public int[] getArrayHundred() {
+        int array[] = new int[100];
+        for (int i = 0; i < 100; i++) {
+            array[i] = i + 1;
+        }
+        return array;
+    }
+
+    public void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+
+//3. Creati o metoda care primeasca un parametru de tip array de numere intregi gol,//
+// si sa il returneze populat cu toate valorile pare de la 1 la 100. //
+// Apelati metoda in main() pentru a verifica daca functioneaza. Atentie, //
+// metoda returneaza un array, deci acesta va trebui surprins si afisat folosind o bucla.
+
+    public int[] getArrayEven() {
+        int array[] = new int[100];
+        for (int i = 0; i < 100; i++) {
+            if (i % 2 == 0)
+                System.out.println(i + "");
+            i++;
+        }
+        return array;
+    }
+
+//4. Creati o metoda care sa primeasca un parametru de tip array de numere, //
+// si sa fie populat cu valori. Metoda sa calculeze si sa returneze //
+// media numerelor din array.//
+// Apelati metoda in main() pentru a verifica daca functioneaza.
+
+    public float getAverageFromArray(int[] array) {
+        float sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum / array.length;
+    }
+
+    //5. Creati o metoda care sa primeasca un parametru de tip array de string-uri, //
+    // populat cu valori, si un parametru de tip String. //
+    // Metoda sa verifice daca valoarea string-ului primit se regaseste in array-ul primit,//
+    // iar daca da sa returneze true iar daca nu, sa returneze false. //
+    // Apelati metoda in main() pentru a verifica daca functioneaza.
+
+    public boolean StrigArray(String[] array, String ceva) {
+        for (String i : array) {
+            if (ceva.equals(i)) {
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+
+    //Creati o metoda care sa primeasca un parametru de tip array de numere, populat cu valori, si un parametru de tip numar.//
+    // Metoda sa verifice daca numarul primit se afla in array-ul primit, si daca da, atunci sa returneze pozitia pe care se afla numarul.  //
+    // Apelati metoda in main() pentru a verifica daca functioneaza.
+    public int ReturnNumber(int[] array, int number) {
+        //int aa = 3;
+        for (int i = 0; i < array.length; i++) {
+            if (Objects.equals(number, i)) {
+                return (i);
+            }
+
+        }
+
+        return number;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
