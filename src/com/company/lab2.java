@@ -1,6 +1,9 @@
 package com.company;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class lab2 {
     public static void main(String[] args) {
 
@@ -86,9 +89,36 @@ public class lab2 {
        System.out.print(oper.StrigArray(new String []{"lapte","carne","oua"},"lapte"));
        System.out.println("number position is:"+oper.ReturnNumber(new int[]{1,2,3,4,5,6},4));
 
+        List<Integer> myList =new ArrayList();
+
+
+        myList.add(1);
+        myList.add(2);
+        myList.add(3);
+        myList.add(4);
+        myList.add(5);
+        myList.add(7);
+        oper.printList(myList);
+
+        oper.printmyList(myList,2);
+
+        oper.addToList(myList,12);
+        oper.addList(myList,-1);
+
+
+     List<String>myString =new ArrayList();
+     myString.add("first");
+     myString.add("second");
+     myString.add("third");
+
+     oper.AddToStrindList(myString,2,"a");
+
+        oper.addTheList(20,myList);
+        oper.printVallueAndList(myList,0);
 
 
     }
+
 
 
     public static void printmyName() {

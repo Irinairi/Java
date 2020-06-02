@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.List;
 import java.util.Objects;
 
 public class LogicalOp {
@@ -273,20 +274,6 @@ public class LogicalOp {
     //}
 
 
-    //Creati o metoda care sa afiseze primele 20 de numere din sirul lui Fibonacci.
-    //public static void printAfisareNumere ( int i){
-    // int i = 1, i1 = 1, i2;
-    // while (i < 18) i++;
-    // {
-    //  i2 = i1 + i;
-    // i = i1;
-    // i1 = i2;
-
-    // System.out.println(i + " " + i1 + " ");
-    //}
-
-
-//}
 //2.  In clasa LogicalOp, creati o metoda care sa scrie pe un array de 100 de pozitii,//
 // valorile de la 1 la 100. Sa se afiseze progresul in consola pe tot parcursul.//
 // Apelati metoda in main() pentru a verifica daca functioneaza.
@@ -366,10 +353,84 @@ public class LogicalOp {
         return number;
     }
 
+    //1.Scrieti o metoda Java, care sa primeasca parametru o Lista, si sa afiseze, pe rand, toate valorile din lista, fiecare pe rand nou.
+
+    public void printList(List<Integer> list) {
+        for (int x : list) {
+            System.out.println(x);
+        }
+    }
+
+    //2.Scrieti o metoda Java, care sa primeasca doi parametrii: un parametru de tip Lista, //
+    // iar celalalt un numar intreg. Sa se parcurga lista si sa afiseze, pe rand, toate valorile din lista, fiecare pe rand nou, //
+    // pornind de la numarul intreg primit ca si parametru.
+
+    public void printmyList(List<Integer> list, int position) {
+        for (int i = position; i < list.size(); i++) {
+            System.out.println(list.get(i));
+
+        }
+
+    }
+
+    //3.Scrieti o metoda Java, care sa primeasca doi parametrii: un parametru sa fie o lista de numere, si celalalt un numar (real sau intreg). //
+    // Metoda sa adauge numarul primit ca si parametru la final de lista.
+    public void addToList(List<Integer> myList, int x) {
+        myList.add(x);
+        System.out.println(myList);
+    }
+
+    //4. Scrieti o metoda Java, care sa primeasca parametru o Lista, si sa afiseze, pe rand, toate valorile din lista, dar invers(de la capat la inceput).
+    public void addList(List<Integer> list, int possition) {
+        int m = possition;
+        for (m = list.size() - 1; m >= 0; m--)
+            System.out.println(list.get(m));
+    }
+
+
+    //5.Scrieti o metoda Java, care sa primeasca trei parametrii: unul de tip Lista de String-uri, unul de tip intreg, si unul de tip String.//
+    // Metoda sa adauge parametrul de tip String in lista primita, iar parametrul de tip intreg reprezinta pozitia la care sa fie pus acel String.
+
+    public void AddToStrindList(List<String> myString, int position, String nr) {
+        //for (int i = position; i < myString.size();i++ ) {
+
+        myString.add(1, nr);
+        System.out.println(myString);
+    }
+
+
+//6.Scrieti o metoda Java, care sa primeasca doi parametrii. Primul dintre ei va fi o Lista, iar metoda sa ia al doilea parametru si sa il adauge pe prima pozitie din lista.
+
+    public void addTheList(int z, List<Integer> myList) {
+        myList.add(0, z);
+
+        System.out.println(myList);
+    }
+
+    //7.Scrieti o metoda Java care sa primeasca parametru o Lista, si sa afiseze ce valori are lista, si ce pe ce pozitie. (Ex: “Pe pozitia 1 valoare este 4”)
+    public void printVallueAndList(List<Integer> list, int possition) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println("Pe pozitia " + (i + 1) + "avem numarul" + list.get(i));
+        }
+
+
+    }
+
+
+
 
 
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
